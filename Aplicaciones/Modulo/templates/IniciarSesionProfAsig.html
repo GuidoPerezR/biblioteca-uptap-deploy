@@ -1,0 +1,53 @@
+{% extends "PaginaPrincipal.html" %}
+{% load static %}
+
+{% block title %} Biblioteca Politecnica Iniciar Sesion {% endblock %}
+
+{% block content %}
+
+<div class="content-alert">
+    {% if messages%}
+        <ul class="messages">
+            {% for message in messages %}
+                <div class="alert alert-success" role="alert">
+                    <li{% if message.tag %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</li>
+                </div>                
+            {% endfor%}    
+        </ul>
+    {% endif%}
+</div>
+
+
+<div class="iniciarComo">
+    <center> Iniciar Sesión </center>
+</div>
+
+<div class="text-center" id="contenido">
+    <main class="form-signin w-100 m-auto">
+      <form class="row" method="post">
+        <div class="form-floating">
+            <div class="d-flex align-items-center">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Correo" name="email">
+            </div>
+        </div>
+
+        <div class="form-floating" id="contraseña">
+            <div class="d-flex align-items-center">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" name="contraseña">
+            </div>
+        </div>
+
+        <div class="Boton">
+            <button type="submit" class="BotonAlumno" id="Ingresar">Ingresar</button>
+        <!--<a href="PaginaLibros" class="BotonAlumno">Ingresar</a>-->
+        </div>
+
+        <div class="Regist" >
+            <h4>¿No te has registrado aún?</h4>
+            <a href="FormularioRegistro">Registrate</a>
+        </div>
+      </form>
+    </main>
+</div>
+
+{% endblock %}

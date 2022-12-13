@@ -1,0 +1,141 @@
+{% extends "PaginaPrincipal.html" %}
+{% load static %}
+
+{% block title %} Biblioteca Politecnica Libros {% endblock %}
+
+{% block content %}
+<div class="Biblioteca">
+    <h1>Software</h1>
+    <section class="content" id="Software">            
+        <div class="box-container">
+            <div class="box" id="libro1">
+                <div class="contenido">
+                    <button type="button" id="libro1"><img src="{%static 'images/libro1.jpg'%}" width="150" height="250">
+                        <h5>Ingeniería del software: Un enfoque práctico</h5>
+                        <div class="info">
+                            <h6>Rogger S. Pressman</h6>
+                            <h6>Disponibles: 2</h6>
+                        </div>
+                    </button>              
+                    
+                </div>
+            </div>
+            
+            <span class="hide" id="hidetext" >
+                <div class="tarjeta" align="center">
+                    <div class="card">                
+                        <div class="contenido">
+                            <h3>Ingeniería del software: Un enfoque práctico</h3>
+                            <h5>por Rogger S. Pressman</h5>
+                            <h5>Disponibles: 2</h5>
+                            <br>
+                            <h3>Detalle del libro</h3>
+                            <h5>Editorial: Mc Graw hill, Septima Edicion(2 abril 2019)</h5>
+                            <h5>Idioma: Español</h5>
+                            <h5>Pasta blanda: 300 páginas</h5>
+                            <a href="#" id="Solicitar">Solicitar</a>
+                            <a href="#"id="Añadir">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>                
+            </span>
+            
+
+            <div class="box" id="libro2">
+                <div class="contenido">
+                    <button type="button" id="libro2"><img src="{%static 'images/libro2.jpg'%}" width="150" height="250" >
+                        <h5>Inteligencia Artificial con aplicaciones a la ingeniería</h5>
+                        <div class="info">
+                            <h6>Pedro Ponce Cruz</h6>
+                            <h6>Disponibles: 0</h6>
+                        </div>
+                    </button>                    
+                </div>
+            </div>
+
+            <span class="hide" id="hidetext2" >
+                <div class="tarjeta" align="center">
+                    <div class="card">                
+                        <div class="contenido">
+                            <h3>Inteligencia Artificial con aplicaciones a la ingeniería</h3>
+                            <h5>por Pedro Ponce Cruz</h5>
+                            <h5>Disponibles: 0</h5>
+                            <br>
+                            <h3>Detalle del libro</h3>
+                            <h5>Editorial: Alfaomega, Tercera Edicion(6 diciembre 2021)</h5>
+                            <h5>Idioma: Español</h5>
+                            <h5>Pasta blanda: 434 páginas</h5>
+                            <a href="#" id="Solicitar">Solicitar</a>
+                            <a href="#"id="Añadir">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>                
+            </span>
+
+            <div class="box" id="libro3">
+                <div class="contenido">
+                    <button type="button" id="libro3"><img src="{%static 'images/libro3.jpg'%}" width="150" height="250" >
+                        <h5>Ingeniería de Software 9</h5>
+                        <div class="info">
+                            <h6>Pearson</h6>
+                            <h6>Disponibles: 3</h6>
+                        </div>
+                    </button>              
+                </div>
+            </div>
+
+            <span class="hide" id="hidetext3" >
+                <div class="tarjeta" align="center">
+                    <div class="card">                
+                        <div class="contenido">
+                            <h3>Ingeniería de Software 9</h3>
+                            <h5>por Pearson</h5>
+                            <h5>Disponibles: 3</h5>
+                            <br>
+                            <h3>Detalle del libro</h3>
+                            <h5>Editorial: Sommerville, Cuarta Edicion(23 julio 2020)</h5>
+                            <h5>Idioma: Español</h5>
+                            <h5>Pasta blanda: 398 páginas</h5>
+                            <a href="#" id="Solicitar">Solicitar</a>
+                            <a href="#"id="Añadir">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>                
+            </span>
+            
+            <div class="box" id="libro4">
+                <div class="contenido">
+                    <button type="button" id="libro4"><img src="{%static 'images/libro5.jpg'%}" width="150" height="250" >
+                        <h5>Java a fondo</h5>
+                        <div class="info">
+                            <h6>Pablo Augusto Sznajdleder</h6>
+                            <h6>Disponibles: 1</h6>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <span class="hide" id="hidetext4" >
+                <div class="tarjeta" align="center">
+                    <div class="card">                
+                        <div class="contenido">
+                            <h3>Java a fondo</h3>
+                            <h5>por Pablo Augusto Sznajdleder</h5>
+                            <h5>Disponibles: 1</h5>
+                            <br>
+                            <h3>Detalle del libro</h3>
+                            <h5>Editorial: Alfaomega, Segunda Edicion(12 mayo 2021)</h5>
+                            <h5>Idioma: Español</h5>
+                            <h5>Pasta blanda: 543 páginas</h5>
+                            <a href="#" id="Solicitar">Solicitar</a>
+                            <a href="#"id="Añadir">Añadir al carrito</a>
+                        </div>
+                    </div>
+                </div>                
+            </span>
+
+
+        </div>         
+    </section>
+</div>
+{% endblock %}

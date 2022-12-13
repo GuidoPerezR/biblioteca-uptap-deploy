@@ -1,0 +1,81 @@
+{% extends "PaginaPrincipal.html" %}
+{% load static %}
+
+{% block title %} Biblioteca Politecnica Registro de Alumno {% endblock %}
+
+{% block content %}
+
+<div class="iniciarComo">
+    <center> Registrar </center>
+</div>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <div class="text-center" id="contenido">
+        <main class="form-signin w-100 m-auto">
+          <form class="row">
+    
+            <div class="form-floating" id="Nombre">
+                <div class="d-flex align-items-center" id="nom">
+                    <input type="text" class='form-control' id="floatingInput" placeholder={{form.nombre.label}} {{form.nombre}}
+                </div>
+            </div>
+    
+            <div class="form-floating" id="Apellidos">
+                <div class="d-flex align-items-center">
+                    <input type="text" class="form-control" id="floatingInput" placeholder={{form.apellidos.label}} {{form.apellidos}}
+                </div>
+            </div>
+    
+            <div class="form-floating" id="correo">
+                <div class="d-flex align-items-center">
+                    <input type="email" class="form-control" id="floatingInput" placeholder={{form.email.label}} {{form.email}}
+                </div>
+            </div>
+    
+            <div class="form-floating" id="matricula">
+                <div class="d-flex align-items-center">
+                    <input type="text" class="form-control" id="floatingInput" placeholder={{form.matricula.label}} {{form.matricula}}
+                </div>
+            </div>
+            
+            
+            <div class="form-floating" id="carrera">
+                {{form.carrera.label}}
+                <div class="d-flex align-items-center" id="inputCar">
+                    {{form.carrera}}
+                </div>
+            </div>
+    
+            <div class="form-floating" id="cuatrimestres">
+                {{form.cuatrimestre.label}}
+                <div class="d-flex align-items-center" id="inputCuatri">
+                    {{form.cuatrimestre}}
+                </div>
+            </div>
+    
+            <div class="form-floating" id="turno">
+                <div class="d-flex align-items-center">
+                    <input type="text" class="form-control" id="floatingInput" placeholder={{form.turno.label}} {{form.turno}}
+                </div>
+            </div>
+    
+            <div class="form-floating" id="contraseña">
+                <div class="d-flex align-items-center">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder={{form.contraseña.label}} {{form.contraseña}}
+                </div>
+            </div>
+    
+            <div class="Boton">
+                <button type="submit" class="BotonAlumno" id="Enviar">Enviar</button>
+            </div>
+          </form>
+        </main>
+    </div>
+
+    
+</form>
+
+{% endblock %}

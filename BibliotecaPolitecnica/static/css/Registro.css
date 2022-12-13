@@ -1,0 +1,94 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+#contenido{
+    padding-top: 40px;
+    font-size: 10px;
+}
+
+#Nombre{
+  padding-top: 40px;
+}
+
+#Apellidos{
+  padding-top: 40px;
+}
+
+#Usuario{
+  padding-top: 40px;
+}
+
+#contraseña{
+    padding-top: 40px;
+}
+
+
+#correo{
+    padding-top: 40px;
+}
+
+
+#matricula{
+    padding-top: 40px;
+}
+
+#carrera{
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+#inputCar{
+  padding-top: 20px;
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+#cuatrimestres{
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+#inputCuatri{
+  padding-top: 20px;
+  padding-left: 120px;
+}
+
+#turno{
+  padding-top: 40px;
+}
+
+.Boton{
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.Registro{
+    padding-top: 100px;
+}
+
+.form-signin {
+  max-width: 400px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  font-size: 20px;
+}
+
+.form-signin input[type="email"] {
+    font-size: 20px;
+}
+
+.form-signin input[type="password"] {
+  font-size: 20px;
+}

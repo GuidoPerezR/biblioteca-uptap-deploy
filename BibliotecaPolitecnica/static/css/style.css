@@ -1,0 +1,162 @@
+:root{
+	--purple: #621a57;
+	--green: #259e65;
+	--white: #FFFFFF;
+	--lg:38px;
+	--md:34px;
+	--sm:30px;
+}
+
+@font-face {
+    font-family: 'fuenteMia';
+    src: url(fonts/MADEOkineSansPERSONALUSE-Medium.otf) format('truetype');
+}
+
+*{
+    font-family: 'fuenteMia';
+	margin: 0;
+}
+
+*,*:after, *:before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contenedor_carga{
+    background-color: #fafafa;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+.spinner-border{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.navbar{
+	display: flex;
+	width: 100%;
+	height: 15vh;
+    background-color: var(--purple);
+	padding-left: 100px;
+	z-index: 1;
+}
+
+.navbar p{
+	margin: 0 0 0 24px;
+    color:var(--white);
+	font-size: var(--lg);
+}
+
+.navbar img{
+	width: 80px;
+	height: auto;
+}
+
+.Modulo{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.title{
+   font-size:var(--md);
+   text-align: center;
+   margin-top: 100px;
+}
+
+.Botones{
+	display: flex;
+	flex-direction: column;
+	padding: 70px;
+}
+
+.Botones-up{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 25px;
+}
+
+.content-button{
+	width: 80%;
+	padding: 15px;
+	
+}
+
+.content-button a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+}
+
+.content-button img{
+	width: 40px;
+}
+
+
+.primary-button {
+	background-color:var(--green);
+	border-radius:15px;
+	cursor: pointer;
+	color: var(--white);
+	font-family:'fuenteMia';
+	font-size: var(--sm);
+	padding:16px 60px;
+	text-decoration:none;
+}
+
+.primary-button:hover {
+	background-color:#09804a;
+	color: white;
+	transform: translateY(-3%);
+	box-shadow: 5px 5px 20px rgba(0, 0 , 0, 1);
+}
+
+
+@media screen and (max-width: 800px){
+	.navbar{
+		padding-left: 10px;
+	}
+
+	.navbar h1{
+		margin-right: 100px;
+	}
+
+	.navbar img{
+		width: 11%;
+	}
+	
+	.cont-btnA{
+		width: 100%;
+	}
+
+	.cont-btnPA{
+		margin-top: 100px;
+		width: 100%;
+	}
+	
+	.Bttn_ProfAsig{
+		padding: 20px;
+	}
+
+	.Bttn_ProfTC{
+		padding: 20px;
+	}
+
+	.cont-btnPTC{
+		margin-bottom: 100px;
+	}
+}
