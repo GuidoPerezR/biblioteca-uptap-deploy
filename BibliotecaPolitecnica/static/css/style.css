@@ -79,18 +79,20 @@
 
 .Botones{
 	display: flex;
-	flex-direction: column;
-	padding: 70px;
+    flex-direction: column;
+    padding: 0 100px;
+    margin-top: 24px;
 }
 
 .Botones-up{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding: 25px;
+	margin-bottom: 24px;
 }
 
 .content-button{
-	width: 80%;
+	width: 100%;
 	padding: 15px;
 	
 }
