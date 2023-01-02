@@ -140,12 +140,11 @@
 	width: 40px;
 }
 
-/*Contenido Inicio de Sesion Alumno*/
+/*Contenido Inicio de Sesion*/
 
 .content-alert{
 	width: 30%;
 	margin-top: 24px;
-	
 }
 
 .content-alert ul {
@@ -153,11 +152,11 @@
     padding: 0 12px;
 }
 
-.iniciarSesionAlumno-title{
-	margin-top: 32px;
+.iniciarSesion-title{
+	margin-top: 42px;
 }
-  
-.content-inicioSesionAlumno{
+
+.content-inicioSesion{
     padding-top: 40px;
 }
 
