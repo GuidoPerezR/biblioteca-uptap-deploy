@@ -1,6 +1,7 @@
 :root{
 	--purple: #621a57;
 	--green: #259e65;
+	--hover: #09804a;
 	--white: #FFFFFF;
 	--lg:38px;
 	--md:34px;
@@ -8,12 +9,12 @@
 }
 
 @font-face {
-    font-family: 'fuenteMia';
+    font-family: 'pageFont';
     src: url(fonts/MADEOkineSansPERSONALUSE-Medium.otf) format('truetype');
 }
 
 *{
-    font-family: 'fuenteMia';
+    font-family: 'pageFont';
 	margin: 0;
 }
 
@@ -65,16 +66,37 @@
 	height: auto;
 }
 
+.primary-button {
+	background-color:var(--green);
+	border-radius:15px;
+	cursor: pointer;
+	color: var(--white);
+	font-size: var(--sm);
+	padding:16px 60px;
+	text-decoration:none;
+	border-color: rgba(0, 0 , 0, 0);
+}
+
+.primary-button:hover {
+	background-color: var(--hover);
+	color: var(--white);
+	transform: translateY(-3%);
+	box-shadow: 5px 5px 20px rgba(0, 0 , 0, 1);
+	border-color: rgba(0, 0 , 0, 0);
+}
+
+/*Contenido Pagina Principal*/
 .Modulo{
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	padding: 24px;
 }
 
 .title{
    font-size:var(--md);
    text-align: center;
-   margin-top: 100px;
+   margin-top: 24px;
 }
 
 .Botones{
@@ -88,13 +110,23 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding: 25px;
-	margin-bottom: 24px;
+	margin-bottom: 32px;
+	gap: 24px;
+}
+
+.Botones-down{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.boton-content{
+	width: 60%;
 }
 
 .content-button{
 	width: 100%;
 	padding: 15px;
-	
 }
 
 .content-button a{
@@ -108,57 +140,47 @@
 	width: 40px;
 }
 
+/*Contenido Inicio de Sesion Alumno*/
 
-.primary-button {
-	background-color:var(--green);
-	border-radius:15px;
-	cursor: pointer;
-	color: var(--white);
-	font-family:'fuenteMia';
-	font-size: var(--sm);
-	padding:16px 60px;
-	text-decoration:none;
+.content-alert{
+	width: 30%;
+	margin-top: 24px;
+	
 }
 
-.primary-button:hover {
-	background-color:#09804a;
-	color: white;
-	transform: translateY(-3%);
-	box-shadow: 5px 5px 20px rgba(0, 0 , 0, 1);
+.content-alert ul {
+    list-style: none;
+    padding: 0 12px;
 }
 
+.iniciarSesionAlumno-title{
+	margin-top: 32px;
+}
+  
+.content-inicioSesionAlumno{
+    padding-top: 40px;
+}
+
+.input-password{
+    padding-top: 40px;
+}
+
+.boton-ingresar{
+    padding-top: 40px;
+}
+
+.button-ingresar{
+	width: 100%;
+}
+
+.form-signin input[type="email"] {
+    font-size: 20px;
+}
+
+.form-signin input[type="password"] {
+  font-size: 20px;
+}
 
 @media screen and (max-width: 800px){
-	.navbar{
-		padding-left: 10px;
-	}
-
-	.navbar h1{
-		margin-right: 100px;
-	}
-
-	.navbar img{
-		width: 11%;
-	}
 	
-	.cont-btnA{
-		width: 100%;
-	}
-
-	.cont-btnPA{
-		margin-top: 100px;
-		width: 100%;
-	}
-	
-	.Bttn_ProfAsig{
-		padding: 20px;
-	}
-
-	.Bttn_ProfTC{
-		padding: 20px;
-	}
-
-	.cont-btnPTC{
-		margin-bottom: 100px;
-	}
 }

@@ -59,7 +59,7 @@ def ValidarInicioSesionAlumno(request):
             request.session['email']=detalleAlumno.email
             return render(request, "paginaLibros.html")
         except Alumno.DoesNotExist as e:
-            messages.success(request, 'Correo o contraseña incorrecto')
+            messages.success(request, 'Usuario o contraseña incorrectos')
     return render(request, "IniciarSesion.html")
 
 #class FormularioRegistro(HttpRequest):
