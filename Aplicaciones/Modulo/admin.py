@@ -12,7 +12,7 @@ admin.site.register(Usuario)
 class AlumnoAdmin(admin.ModelAdmin):
     ordering = ('matricula',)
     search_fields = ('id_carrera', 'id_cuatrimestre',)
-    exclude = ('matricula',)
+    #exclude = ('matricula',)
 
 @admin.register(Cuatrimestre)
 class CuatrimestreAdmin(admin.ModelAdmin):
