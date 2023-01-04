@@ -1,11 +1,11 @@
-const booksContainer = document.querySelector('.box-container')
+const booksContainer = document.querySelector('.books-container')
 
 const bookList = []
 bookList.push({
-    name:'Inteligencia Artificial',
-    author: 'Yo mero',
-    available: '10',
-    image: '{%static "images/libro2.jpg"%}'
+    name:'Ingenieria del software: Un enfoque practico',
+    author: 'Rogger S. Pressman',
+    available: '2',
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 })
 
 /* <div class="book">
@@ -34,13 +34,14 @@ function renderBooks(arr){
         const bookImg = document.createElement('img')
         bookImg.setAttribute('src', book.image)
         const bookName = document.createElement('p')
+        bookName.classList.add('book-title')
         bookName.innerText = book.name
         const bookInfo = document.createElement('div')
         bookInfo.classList.add('book-info')
         const bookAuthor = document.createElement('p')
         bookAuthor.innerText = book.author
         const bookAvailable = document.createElement('p')
-        bookAvailable.innerText = book.available
+        bookAvailable.innerText = 'Disponibles: ' + book.available
 
         bookInfo.append(bookAuthor, bookAvailable)
 

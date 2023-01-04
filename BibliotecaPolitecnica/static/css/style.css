@@ -2,10 +2,13 @@
 	--purple: #621a57;
 	--green: #259e65;
 	--hover: #09804a;
+	--bgBook: #BCBCBC;
 	--white: #FFFFFF;
 	--lg:38px;
 	--md:34px;
 	--sm:30px;
+	--sizeBookTitle: 20px;
+	--sizeInfoBook: 15px;
 }
 
 @font-face {
@@ -186,6 +189,67 @@
 
 .form-signin input[type="password"] {
   font-size: 20px;
+}
+
+/*Contenido Pagina Libros*/
+
+h1{
+	padding-left: 60px;
+    padding-top: 30px;
+    width: 80%;
+}
+
+.books-container{
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+	padding-bottom: 100px;
+}
+
+.books-container button{
+	background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    height: 100%;
+	width: 100%;
+}
+
+.book-card{
+	width: 20%;
+    margin: 2rem; 
+}
+
+.book-card:hover{
+	transform: translateY(-3%);
+}
+
+.book-content{
+	background-color: var(--bgBook);
+    border-radius: 30px;
+	padding-bottom: 24px;
+}
+
+.book-content img{
+	width: 150px;
+	height: 250px;
+	padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+.book-info{
+	padding-left: 30px;
+    text-align: left;
+}
+
+.book-info p{
+	margin-bottom: 5px;
+	font-size: var(--sizeInfoBook);
+}
+
+.book-title{
+	font-size: var(--sizeBookTitle);
+	padding-bottom: 10px;
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 800px){
