@@ -4,6 +4,44 @@ const bookList = []
 bookList.push({
     name:'Ingenieria del software: Un enfoque practico',
     author: 'Rogger S. Pressman',
+    available: 2,
+    editorial: 'Mc Graw hill, Septima Edicion(2 abril 2019)',
+    languague: 'Español',
+    pages: 300,
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+})
+
+bookList.push({
+    name:'Ingenieria del software: Un enfoque practico',
+    author: 'Rogger S. Pressman',
+    available: '2',
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+})
+
+bookList.push({
+    name:'Ingenieria del software: Un enfoque practico',
+    author: 'Rogger S. Pressman',
+    available: '2',
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+})
+
+bookList.push({
+    name:'Ingenieria del software: Un enfoque practico',
+    author: 'Rogger S. Pressman',
+    available: '2',
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+})
+
+bookList.push({
+    name:'Ingenieria del software: Un enfoque practico',
+    author: 'Rogger S. Pressman',
+    available: '2',
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+})
+
+bookList.push({
+    name:'Ingenieria del software: Un enfoque practico',
+    author: 'Rogger S. Pressman',
     available: '2',
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 })
@@ -52,6 +90,49 @@ function renderBooks(arr){
         bookCard.appendChild(bookContent)
 
         booksContainer.appendChild(bookCard)
+
+        /* <div class="tarjeta" align="center"> 
+                        <div class="contenido">
+                            <h3>Ingeniería del software: Un enfoque práctico</h3>
+                            <h5>por Rogger S. Pressman</h5>
+                            <h5>Disponibles: 2</h5>
+                            <br>
+                            <h3>Detalle del libro</h3>
+                            <h5>Editorial: Mc Graw hill, Septima Edicion(2 abril 2019)</h5>
+                            <h5>Idioma: Español</h5>
+                            <h5>Pasta blanda: 300 páginas</h5>
+                            <a href="#" id="Solicitar">Solicitar</a>
+                            <a href="#"id="Añadir">Añadir al carrito</a>
+                        </div>
+                </div> */
+
+        const hiddenCard = document.createElement('div')
+        hiddenCard.classList.add('hidden-card')
+
+        const hiddenCardContent = document.createElement('div')
+        hiddenCardContent.classList.add('hidden-card-content')
+
+        const bookDetail = document.createElement('p')
+        bookDetail.innerText = 'Detalle del libro'
+        const bookEditorial = document.createElement('p')
+        bookEditorial.innerText = 'Editorial: ' + book.editorial
+        const bookLanguague = document.createElement('p')
+        bookLanguague.innerText = 'Idioma: ' + book.languague
+        const bookPages = document.createElement('p')
+        bookPages.innerText = 'Páginas: ' + book.pages
+        const buttonSolicitar = document.createElement('a')
+        buttonSolicitar.classList.add('boton-solicitar')
+        buttonSolicitar.innerText = 'Solicitar'
+        const buttonAnadir = document.createElement('a')
+        buttonAnadir.classList.add('boton-anadir')
+        buttonAnadir.innerText = 'Añadir al carrito'
+
+        hiddenCardContent.append(bookDetail, bookEditorial, bookLanguague,
+            bookPages, buttonSolicitar, buttonAnadir)
+
+        hiddenCard.appendChild(hiddenCardContent)
+
+        booksContainer.appendChild(hiddenCardContent)
     }
 }
 
