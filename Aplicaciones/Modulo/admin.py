@@ -3,10 +3,6 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Libro)
-admin.site.register(Cargo)
-admin.site.register(Docente_administrativo)
-admin.site.register(Administrador)
-admin.site.register(Usuario)
 
 @admin.register(Alumno)
 class AlumnoAdmin(admin.ModelAdmin):
@@ -18,10 +14,10 @@ class AlumnoAdmin(admin.ModelAdmin):
 class CuatrimestreAdmin(admin.ModelAdmin):
     ordering = ('nombre_cuatrimestre',)
     search_fields = ('nombre_cuatrimestre',)
-    exclude = ('id_cuatrimestre',)
+    exclude = ('id_cuatrimestre', 'nombre_cuatrimestre')
 
 @admin.register(Carrera)
 class CarreraAdmin(admin.ModelAdmin):
     ordering = ('nom_carrera',)
     search_fields = ('nom_carrera',)
-    exclude = ('id_carrera',)
+    exclude = ('id_carrera', 'nom_carrera')

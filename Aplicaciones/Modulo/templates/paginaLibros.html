@@ -1,19 +1,227 @@
-{% extends "PaginaPrincipal.html" %}
+{% extends "index.html" %}
 {% load static %}
 
 {% block title %} Biblioteca Politecnica Libros {% endblock %}
 
 {% block content %}
+{% include "BarraNavegacionPrincipal.html" %}
 <div class="Biblioteca">
 
-    <h1>Software</h1>
+    <nav class="secondary-navbar">
 
-    <section class="content-books Software">            
+        <div class="secondary-navbar-content">
+
+            <div class="menu-icon">
+
+                <div class="menu-icon-content">
+                    <img src="{%static 'icons/menu.svg'%}">
+                </div>
+
+            </div>
+
+            <div class="secondary-navbar-sections">
+                <p>Agroindustrial</p>
+                <p>Ambiental</p>
+                <p>Animación</p>
+                <p>Automotrices</p>
+                <p>Energía</p>
+                <p>Financiera</p>
+                <p>Logística</p>
+                <p>Mecatrónica</p>
+                <p>Nanotecnología</p>
+                <p>Software</p>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="books-page">
+        <div class="list-books software">
+
+            <div class="list-books-container">
+                <img class="control prev" src="{%static 'images/left.png'%}">
+                <div class="slider">
+                    <img src="{%static 'images/libro1.jpg'%}">
+                    <img src="{%static 'images/libro1.jpg'%}">
+                    <img src="{%static 'images/libro1.jpg'%}">
+                    <img src="{%static 'images/libro2.jpg'%}">
+                    <img src="{%static 'images/libro1.jpg'%}">
+                    <img src="{%static 'images/libro1.jpg'%}">
+                    <img src="{%static 'images/libro1.jpg'%}">
+                </div>
+                <img class="control next" src="{%static 'images/right.png'%}">
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <section class="content-books Software">
         <div class="books-container">
 
 
-               
-            <!--
+
+            
+                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="{%static 'images/libro1.jpg'%}">
+                                    </div>
+                                </div>
+                                
+                                <div class="card-description">
+                                    <div class="card-info">
+                                        <div class="card-title">
+                                            <p>Algebra Lineal</p>
+                                        </div>
+                                        <div class="card-author">
+                                            <p>Autor:Gareth williams</p>
+                                        </div>
+                                        <div class="card-available">
+                                            <p>Disponibles:4</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                <div class="list-books-container">
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-container mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-description">
+                                    <div class="card-image">
+                                        <div class="card-image-content">
+                                            <img src="{%static 'images/libro1.jpg'%}">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-info">
+                                        <div class="card-info-content">
+                                            <div class="card-title">
+                                                <p>Algebra Lineal</p>
+                                            </div>
+                                            <div class="card-author">
+                                                <p>Autor:Gareth williams</p>
+                                            </div>
+                                            <div class="card-available">
+                                                <p>Disponibles:4</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-description">
+                                    <div class="card-image">
+                                        <div class="card-image-content">
+                                            <img src="{%static 'images/libro1.jpg'%}">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-info">
+                                        <div class="card-info-content">
+                                            <div class="card-title">
+                                                <p>Algebra Lineal</p>
+                                            </div>
+                                            <div class="card-author">
+                                                <p>Autor:Gareth williams</p>
+                                            </div>
+                                            <div class="card-available">
+                                                <p>Disponibles:4</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-description">
+                                    <div class="card-image">
+                                        <div class="card-image-content">
+                                            <img src="{%static 'images/libro1.jpg'%}">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-info">
+                                        <div class="card-info-content">
+                                            <div class="card-title">
+                                                <p>Algebra Lineal</p>
+                                            </div>
+                                            <div class="card-author">
+                                                <p>Autor:Gareth williams</p>
+                                            </div>
+                                            <div class="card-available">
+                                                <p>Disponibles:4</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-description">
+                                    <div class="card-image">
+                                        <div class="card-image-content">
+                                            <img src="{%static 'images/libro1.jpg'%}">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-info">
+                                        <div class="card-info-content">
+                                            <div class="card-title">
+                                                <p>Algebra Lineal</p>
+                                            </div>
+                                            <div class="card-author">
+                                                <p>Autor:Gareth williams</p>
+                                            </div>
+                                            <div class="card-available">
+                                                <p>Disponibles:4</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-description">
+                                    <div class="card-image">
+                                        <div class="card-image-content">
+                                            <img src="{%static 'images/libro1.jpg'%}">
+                                        </div>
+                                    </div>
+
+                                    <div class="card-info">
+                                        <div class="card-info-content">
+                                            <div class="card-title">
+                                                <p>Algebra Lineal</p>
+                                            </div>
+                                            <div class="card-author">
+                                                <p>Autor:Gareth williams</p>
+                                            </div>
+                                            <div class="card-available">
+                                                <p>Disponibles:4</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
             <div class="box" id="libro1">
                 <div class="contenido">
                     <button type="button" id="libro1"><img src="{%static 'images/libro1.jpg'%}" width="150" height="250">
@@ -156,7 +364,8 @@
             </span>
 
             -->
-        </div>         
+        </div>
     </section>
 </div>
+{% include "footer.html" %}
 {% endblock %}

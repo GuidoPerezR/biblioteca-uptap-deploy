@@ -1,3 +1,6 @@
+
+
+/*
 const booksContainer = document.querySelector('.books-container')
 
 const bookList = []
@@ -59,7 +62,7 @@ bookList.push({
                 </div>
             </div>
 */
-
+/*
 function renderBooks(arr){
     for(book of arr){
         const bookCard = document.createElement('div')
@@ -105,7 +108,7 @@ function renderBooks(arr){
                             <a href="#"id="Añadir">Añadir al carrito</a>
                         </div>
                 </div> */
-
+/*
         const hiddenCard = document.createElement('div')
         hiddenCard.classList.add('hidden-card')
 
@@ -136,4 +139,4 @@ function renderBooks(arr){
     }
 }
 
-renderBooks(bookList)
+//renderBooks(bookList)*/

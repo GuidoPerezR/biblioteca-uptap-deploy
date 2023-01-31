@@ -26,9 +26,6 @@ class Cuatrimestre(models.Model):
     def __str__(self):
         return self.nombre_cuatrimestre
 
-
-
-
 class Alumno(models.Model):
     matricula = models.IntegerField(primary_key=True)
     nombre = models.CharField(max_length=50)
