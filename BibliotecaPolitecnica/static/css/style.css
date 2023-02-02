@@ -2,7 +2,7 @@
 	--purple: #674EA7;
 	--green: #93CD99;
 	--hover: #09804a;
-	--bgBook: #BCBCBC;
+	--bgBook: #d7d7d7;
 	--white: #FFFFFF;
 	--size-text: 20px;
 	--subtitle: 30px;
@@ -318,7 +318,11 @@
 	cursor: pointer;
 }
 
-.list-books{
+.section-name{
+	margin: 3rem 12rem;
+}
+
+.list-books-section{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -326,44 +330,107 @@
 
 .list-books-container{
 	position: relative;
-	background: rebeccapurple;
 }
 
 .slider{
 	display: flex;
-	background: black;
-	padding: 2px;
-	width: 600px;
-	height: 150px;
+	width: 1200px;
+	height: 450px;
+	padding: 24px;
 	overflow: hidden;
 	scroll-behavior: smooth;
-}
-
-.slider img{
-	margin: 3px;
+	gap: 50px;
 }
 
 .control{
 	position: absolute;
-	width: 50px;
-	height: 50px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
-	background: blanchedalmond;
+	background: black;
 	cursor: pointer;
 	object-fit: contain;
 	padding: 10px;
 }
 
 .prev{
+	padding: 12px;
 	left: 0;
 	top: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-125%,-50%);
 }
 
 .next{
+	padding: 12px;
 	right: 0;
 	top: 50%;
-	transform: translate(50%, -50%);
+	transform: translate(125%, -50%);
+}
+
+.book{
+	box-shadow: 2px 4px 10px rgb(147, 147, 147);
+	transition: all 400ms ease;
+}
+
+.book p{
+	margin-bottom: 0;
+}
+
+.book:hover{
+	cursor: pointer;
+	transform: translateY(-3%);
+}
+
+.book-content{
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+	height: 400px;
+}
+
+.book-image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-content{
+	width: 200px;
+	height: auto;
+}
+
+.image-content img{
+	padding: 24px;
+	width: 100%;
+	height: 100%;
+}
+
+.book-description{
+	height: 40%;
+}
+
+.book-info{
+	height: 100%;
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	background-color: var(--bgBook);
+}
+
+.book-title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--sizeBookTitle);
+}
+
+.book-author, .book-available{
+	margin-left: 24px;
+}
+
+.book-author p, .book-available p{
+	font-family: 'Titillium Web', sans-serif;
 }
 
 /*Contenido Pagina Principal
