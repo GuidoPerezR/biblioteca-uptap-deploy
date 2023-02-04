@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Biblioteca Politecnica Libros {% endblock %}
+
+{% block content %}
+{% include "BarraNavegacionPrincipal.html" %}
+<div class="bookRequest">
+    <div class="book-request-content">
+
+        <div class="book-request-card">
+            <div class="book-request-description">
+                <div class="book-request-info">
+                    <p class="text-thanks-request">¡Gracias por tu solicitud!</p>
+                    <div class="book-request-date">
+                        <p>Usted ha solicitado el libro Introduction to Java Programming con fecha del 09/01/2023</p>
+                    </div>
+                    <div class="book-request-return-date">
+                        <p>La fecha de devolucion es el 11/01/2023</p>
+                    </div>
+                    <p class="text-warm">En caso de que no regrese el libro a tiempo o lo devuelva dañado, se le
+                        aplicara una sancion</p>
+                    <div class="book-request-button">
+                        <div class="button-content boton-seguir-explorando">
+                            <a href="returnBookPage">
+                                <button class="primary-button button-seguir-explorando">Seguir explorando</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
+{% endblock %}

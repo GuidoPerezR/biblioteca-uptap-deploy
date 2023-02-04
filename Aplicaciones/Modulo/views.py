@@ -17,3 +17,10 @@ def ValidarInicioSesionAlumno(request):
 
 def bookDetail(request):
     return render(request, "bookDetail.html")
+
+
+def bookRequest(request):
+    return render(request, "bookRequest.html")
+
+def booksPage(request):
+    return render(request, "paginaLibros.html")
