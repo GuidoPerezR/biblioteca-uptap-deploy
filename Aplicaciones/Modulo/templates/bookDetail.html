@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Biblioteca Politecnica Libros {% endblock %}
+
+{% block content %}
+{% include "BarraNavegacionPrincipal.html" %}
+
+<div class=bookDetail">
+    <div class="book-detail-content">
+
+        <div class="book-detail-card">
+            <div class="book-detail-image">
+                <div class="book-detail-image-content">
+                    <img src="{%static 'images/libro2.jpg'%}">
+                </div>
+            </div>
+            <div class="book-detail-description">
+                <div class="book-detail-info">
+                    <div class="book-detail-title">
+                        <p>Introduction to Java Programming</p>
+                    </div>
+                    <div class="book-detail-available">
+                        <p>Disponibles: 5</p>
+                    </div>
+                    <p class="text-informacion-del-libro">Informacion del libro</p>
+                    <div class="book-detail-author">
+                        <p>Autor: K. Somasundaram</p>
+                    </div>
+                    <div class="book-detail-editorial">
+                        <p>Editorial: Jaico Publishing House</p>
+                    </div>
+                    <div class="book-detail-languague">
+                        <p>Idioma: Ingles</p>
+                    </div>
+                    <div class="book-detail-pages">
+                        <p>Paginas: 646</p>
+                    </div>
+                </div>
+                <div class="book-detail-buttons">
+                    <div class="button-content boton-solicitar">
+                        <button type="submit" class="primary-button button-solicitar">Solicitar</button>
+                    </div>
+                    <div class="button-content boton-Añadir">
+                        <button type="submit" class="primary-button button-Añadir">Añadir al librero</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}

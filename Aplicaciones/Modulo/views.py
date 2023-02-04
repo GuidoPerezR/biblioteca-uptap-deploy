@@ -4,9 +4,6 @@ from .models import *
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
 
-def PaginaLibros(request):
-    return render(request, "paginaLibros.html")
-
 def ValidarInicioSesionAlumno(request):
     if request.method=='POST':
         try:
@@ -17,3 +14,6 @@ def ValidarInicioSesionAlumno(request):
         except Alumno.DoesNotExist as e:
             messages.success(request, 'Usuario o contraseña incorrectos')
     return render(request, "logIn.html")
+
+def bookDetail(request):
+    return render(request, "bookDetail.html")

@@ -345,6 +345,10 @@
 	gap: 50px;
 }
 
+.slider a{
+	text-decoration: none;
+}
+
 .control{
 	position: absolute;
 	width: 80px;
@@ -433,6 +437,7 @@
 .book-title p{
 	font-size: 16px;
 	align-items: right;
+	color: black;
 }
 
 .book-author, .book-available{
@@ -442,7 +447,77 @@
 .book-author p, .book-available p{
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 14px;
+	color: black;
 }
+
+/*Contenido de detalle de libro*/
+.book-detail-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 0px;
+}
+
+.book-detail-content p{
+	margin-bottom: 0;
+}
+
+.book-detail-card{
+	display: flex;
+	width: 1100px;
+	background: var(--bgBook);
+}
+
+.book-detail-image{
+	padding: 6px;
+}
+
+.book-detail-image-content{
+	width: 300px;
+	height: 400px;
+	background: var(--white);
+}
+
+.book-detail-image-content img{
+	padding: 24px;
+	width: 100%;
+	height: 100%;
+}
+
+.book-detail-description{
+	padding: 24px;
+}
+
+.book-detail-title{
+	font-size: var(--title);
+	text-align: center;
+}
+
+.book-detail-info{
+	width: 800px;
+}
+
+.book-detail-info p{
+	margin-bottom: 12px;
+}
+
+.text-informacion-del-libro{
+	font-size: var(--size-text);
+}
+
+.book-detail-available p, .book-detail-author p, .book-detail-editorial p, 
+.book-detail-languague p, .book-detail-pages p{
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 14px;
+}
+
+.book-detail-buttons{
+	margin-top: 24px;
+	display: flex;
+	gap: 42px;
+	justify-content: center;
+}
+
 
 /*Contenido Pagina Principal
 .Modulo{
