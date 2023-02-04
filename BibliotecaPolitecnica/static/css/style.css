@@ -304,6 +304,10 @@
 	align-items: center;
 }
 
+.secondary-navbar-sections a{
+	text-decoration: none;
+} 
+
 .secondary-navbar-sections p {
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 600;
@@ -335,7 +339,6 @@
 .slider{
 	display: flex;
 	width: 1200px;
-	height: 450px;
 	padding: 24px;
 	overflow: hidden;
 	scroll-behavior: smooth;
@@ -347,10 +350,14 @@
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background: black;
+	background: rgb(149, 149, 149);
 	cursor: pointer;
 	object-fit: contain;
 	padding: 10px;
+}
+
+.control:hover{
+	background: black;
 }
 
 .prev{
@@ -386,6 +393,7 @@
 	flex-direction: column;
 	width: 250px;
 	height: 400px;
+	overflow: hidden;
 }
 
 .book-image{
@@ -396,7 +404,7 @@
 
 .image-content{
 	width: 200px;
-	height: auto;
+	height: 250px;
 }
 
 .image-content img{
@@ -419,10 +427,12 @@
 }
 
 .book-title{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: var(--sizeBookTitle);
+	text-align: center;
+}
+
+.book-title p{
+	font-size: 16px;
+	align-items: right;
 }
 
 .book-author, .book-available{
@@ -431,6 +441,7 @@
 
 .book-author p, .book-available p{
 	font-family: 'Titillium Web', sans-serif;
+	font-size: 14px;
 }
 
 /*Contenido Pagina Principal
