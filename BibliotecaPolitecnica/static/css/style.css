@@ -128,6 +128,7 @@ p {
 .navbar-icons img {
 	width: 55px;
 	height: auto;
+	cursor: pointer;
 }
 
 .primary-button {
@@ -577,6 +578,81 @@ p {
 	margin-top: 24px;
 }
 
+/*Contenido Carrito de Libros*/
+.inactive {
+	display: none;
+}
+
+.book-cart-content {
+	width: 400px;
+	padding: 24px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	background: rgb(227, 227, 227);
+	border-radius: 20px;
+	z-index: 1;
+}
+
+.book-cart-head{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.book-cart-head-title{
+	width: 100%;
+}
+
+.book-cart-head-title p {
+	font-size: 24px;
+	text-align: center;
+}
+
+.book-cart-head-image img{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.book-cart-product {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	gap: 16px;
+	margin-bottom: 24px;
+	align-items: center;
+	background: var(--white);
+	border-radius: 20px;
+}
+
+.book-cart-image-content {
+	margin: 0;
+}
+
+.book-cart-image-content img {
+	width: 80px;
+	height: 100px;
+	border-radius: 20px;
+	object-fit: cover;
+	padding: 12px;
+}
+
+.book-cart-book-title {
+	font-size: 14px;
+}
+
+.book-cart-delete-content img{
+	width: 40px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.book-cart-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 /*Contenido Pagina Principal
 .Modulo{

@@ -1,4 +1,4 @@
-console.log("joto")
+/*Programacion Slider*/ 
 const prev = document.querySelector('.prev')
 const next = document.querySelector('.next')
 const slider = document.querySelector('.slider')
@@ -10,6 +10,18 @@ prev.addEventListener('click', () => (
 next.addEventListener('click', () => (
     slider.scrollLeft += 600
 ))
+
+/*Programacion carrito de libros*/
+const buttonBookCart = document.querySelector('.book-cart-icon')
+const bookCart = document.querySelector('.aside-book-cart')
+
+buttonBookCart.addEventListener('click', toggleBookCart);
+
+function openBookCart(){
+    bookCart.classList.remove('inactive');
+}
+
+console.log("que onda ")
 
 /*
 const booksContainer = document.querySelector('.books-container')

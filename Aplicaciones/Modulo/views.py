@@ -26,3 +26,6 @@ def bookRequest(request):
 @login_required 
 def booksPage(request):
     return render(request, "paginaLibros.html")
+
+def bookCart(request):
+    return render(request, "bookCart.html")

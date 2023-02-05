@@ -7,4 +7,6 @@ urlpatterns = [
     path('BooksPage/', booksPage, name='BooksPage'),
     path('BookDetail/', bookDetail, name='BookDetail'),
     path('BookRequest/', bookRequest, name='BookRequest'),
+    path('BookCart/', bookCart, name='BookCart'),
+    
 ] 
