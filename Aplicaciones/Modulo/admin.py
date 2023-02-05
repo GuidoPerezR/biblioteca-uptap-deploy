@@ -14,10 +14,9 @@ class AlumnoAdmin(admin.ModelAdmin):
 class CuatrimestreAdmin(admin.ModelAdmin):
     ordering = ('nombre_cuatrimestre',)
     search_fields = ('nombre_cuatrimestre',)
-    exclude = ('id_cuatrimestre', 'nombre_cuatrimestre')
 
 @admin.register(Carrera)
 class CarreraAdmin(admin.ModelAdmin):
     ordering = ('nom_carrera',)
     search_fields = ('nom_carrera',)
-    exclude = ('id_carrera', 'nom_carrera')
+    

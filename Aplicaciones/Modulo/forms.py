@@ -3,8 +3,7 @@ from django import forms
 from .models import *
 
 class ProductForm(forms.Form):
-    nombre = forms.CharField(max_length=50, required=True)
-    apellidos = forms.CharField(max_length=50, required=True)
+    nombre_completo = forms.CharField(max_length=100, required=True)
     email = forms.CharField(max_length=50, required=True)
     matricula = forms.IntegerField()
     carrera = forms.ModelChoiceField(label="Carrera", queryset=Carrera.objects.all())

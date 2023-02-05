@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import ProductForm
+#from .forms import ProductForm
 from .models import *
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
