@@ -4,6 +4,7 @@ from .views import *
 app_name='modulo'
 urlpatterns = [
     path('', ValidarInicioSesionAlumno, name="index"),
+    path('BooksPage/', booksPage, name='BooksPage'),
     path('BookDetail/', bookDetail, name='BookDetail'),
-    path('BookDetail/BookRequest/', bookRequest, name='BookRequest'),
+    path('BookRequest/', bookRequest, name='BookRequest'),
 ] 
