@@ -11,20 +11,33 @@ next.addEventListener('click', () => (
     slider.scrollLeft += 600
 ))
 
-/*Programacion carrito de libros*/
-const buttonOpenBookCart = document.querySelector('.book-cart-icon')
+/*Programacion menu de vistas de la pagina de libros*/
+const buttonBookCart = document.querySelector('.book-cart-icon')
+const buttonUserMenu = document.querySelector('.user-icon')
 const bookCart = document.querySelector('.aside-book-cart')
-const buttonCloseBookCart = document.querySelector('.book-card-head-content-image')
+const userMenu = document.querySelector('.aside-user-menu')
 
-buttonOpenBookCart.addEventListener('click', openBookCart);
-buttonCloseBookCart.addEventListener('click', closeBookCart);
+buttonUserMenu.addEventListener('click', toggleUserMenu)
+buttonBookCart.addEventListener('click', toggleBookCart)
 
-function openBookCart(){
-    bookCart.classList.remove('inactive');
+function toggleUserMenu(){
+    const isBookCartClosed = bookCart.classList.contains('inactive')
+
+    if(!isBookCartClosed){
+        bookCart.classList.add('inactive')
+    }
+
+    userMenu.classList.toggle('inactive')
 }
 
-function closeBookCart(){
-    bookCart.classList.add('inactive');
+function toggleBookCart(){
+    const isUserMenuClosed = userMenu.classList.contains('inactive')
+
+    if(!isUserMenuClosed){
+        userMenu.classList.add('inactive')
+    }
+
+    bookCart.classList.toggle('inactive')
 }
 
-console.log("que onda ")
+console.log(" sssonda ")

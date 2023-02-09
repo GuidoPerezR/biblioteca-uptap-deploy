@@ -19,7 +19,7 @@ def ValidarInicioSesionAlumno(request):
 def bookDetail(request):
     return render(request, "bookDetail.html")
 
-
+@login_required 
 def bookRequest(request):
     return render(request, "bookRequest.html")
 
@@ -29,3 +29,6 @@ def booksPage(request):
 
 def bookCart(request):
     return render(request, "bookCart.html")
+
+def userMenu(request):
+    return render(request, "userMenu.html")

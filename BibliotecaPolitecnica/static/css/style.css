@@ -36,6 +36,10 @@ p {
 	box-sizing: border-box;
 }
 
+.inactive {
+	display: none;
+}
+
 #contenedor_carga {
 	background-color: var(--white);
 	height: 100%;
@@ -579,10 +583,6 @@ p {
 }
 
 /*Contenido Carrito de Libros*/
-.inactive {
-	display: none;
-}
-
 .book-cart-content {
 	width: 400px;
 	padding: 24px;
@@ -608,12 +608,6 @@ p {
 .book-cart-head-title p {
 	font-size: 24px;
 	text-align: center;
-}
-
-.book-cart-head-image img{
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
 }
 
 .book-cart-product {
@@ -652,6 +646,84 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/*Contenido Menu de Usuario*/
+.user-menu-content{
+	width: 450px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	background: var(--white);
+	border-radius: 20px;
+	border: 3px solid rgb(165, 165, 165);
+	z-index: 1;
+}
+
+.user-menu-content hr{
+	margin: 0;
+}
+
+.user-menu-data{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+	padding: 24px 42px;
+}
+
+.user-menu-data-info{
+	display: flex;
+	flex-direction: column;
+}
+
+.user-menu-data-image img{
+	width: 70px;
+	height: 70px;
+}
+
+.user-menu-data-name p{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.user-menu-data-email p{
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+}
+
+.user-menu-edit-profile{
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 24px 42px;
+}
+
+.user-menu-edit-profile-image img{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.user-menu-edit-profile-text p{
+	font-size: 18px;
+}
+
+.user-menu-log-out{
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 24px 42px;
+}
+
+.user-menu-log-out-image img{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.user-menu-log-out-text p{
+	font-size: 18px;
 }
 
 /*Contenido Pagina Principal
