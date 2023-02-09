@@ -427,6 +427,7 @@ p {
 }
 
 .book-image {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -569,7 +570,6 @@ p {
 	font-size: var(--title);
 }
 
-.book-request-date p,
 .book-request-return-date p {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 14px;
@@ -725,6 +725,80 @@ p {
 .user-menu-log-out-text p{
 	font-size: 18px;
 }
+
+/*Contenido Pagina de libros del Administrador*/
+
+.admin-book:hover{
+	cursor: default;
+}
+
+.edit-icon{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 12px;
+	cursor: pointer;
+}
+
+.edit-icon img{
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+}
+
+.add-book{
+	cursor: pointer;
+}
+
+/*Contenido del detalle del libro del Administrador*/
+.book-detail-image-admin{
+	position: relative;
+}
+
+.book-detail-image-cover{
+	position: absolute;
+	top: 0;
+	width: 300px;
+	height: 400px;
+	background: rgba(158, 158, 158, 0.452);
+	padding: 24px;
+	z-index: 1;
+}
+
+.book-detail-description-admin{
+	width: 100%;
+}
+.book-detail-info-admin{
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 500px;
+}
+
+.book-detail-info-admin p{
+	margin-bottom: 0;
+}
+
+.book-detail-admin{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.book-detail-admin p{
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 14px;
+}
+
+.book-detail-admin input{
+	width: 400px;
+	height: 30px;
+	font-size: 14px;
+	padding: 6px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+
 
 /*Contenido Pagina Principal
 .Modulo{

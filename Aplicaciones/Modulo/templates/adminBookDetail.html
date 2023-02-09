@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Biblioteca Politecnica Libros {% endblock %}
+
+{% block content %}
+{% include "BarraNavegacion.html" %}
+
+<div class=bookDetail">
+    <div class="book-detail-content">
+
+        <div class="book-detail-card">
+            <div class="book-detail-image book-detail-image-admin">
+                <div class="book-detail-image-content">
+                    <img src="{%static 'images/libro2.jpg'%}">
+                    <div class="book-detail-image-cover">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="book-detail-description book-detail-description-admin">
+                <div class="book-detail-info book-detail-info-admin">
+                    <div class="book-detail-title book-detail-admin">
+                        <p>Titulo: </p><input type="text">
+                    </div>
+                    <div class="book-detail-available book-detail-admin">
+                        <p>Disponibles: </p><input type="text">
+                    </div>
+                    <p class="text-informacion-del-libro">Informacion del libro</p>
+                    <div class="book-detail-author book-detail-admin">
+                        <p>Autor: </p><input type="text">
+                    </div>
+                    <div class="book-detail-editorial book-detail-admin">
+                        <p>Editorial: </p><input type="text">
+                    </div>
+                    <div class="book-detail-languague book-detail-admin">
+                        <p>Idioma: </p><input type="text">
+                    </div>
+                    <div class="book-detail-pages book-detail-admin">
+                        <p>Paginas: </p><input type="text">
+                    </div>
+                </div>
+                <div class="book-detail-buttons">
+                    <div class="button-content boton-guardar">
+                        <a href="{% url 'modulo:BookRequest' %}">
+                            <button class="primary-button button-guardar">Guardar Cambios</button>
+                        </a>
+                    </div>
+                    <div class="button-content boton-Añadir">
+                        <button type="submit" class="primary-button button-Añadir">Eliminar Libro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}

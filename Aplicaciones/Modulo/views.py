@@ -27,8 +27,5 @@ def bookRequest(request):
 def booksPage(request):
     return render(request, "paginaLibros.html")
 
-def bookCart(request):
-    return render(request, "bookCart.html")
-
-def userMenu(request):
-    return render(request, "userMenu.html")
+def adminView(request):
+    return render(request, "adminBookDetail.html")

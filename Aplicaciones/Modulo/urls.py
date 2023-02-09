@@ -7,7 +7,5 @@ urlpatterns = [
     path('BooksPage/', booksPage, name='BooksPage'),
     path('BookDetail/', bookDetail, name='BookDetail'),
     path('BookRequest/', bookRequest, name='BookRequest'),
-    path('BookCart/', bookCart, name='BookCart'),
-    path('UserMenu/', userMenu, name='UserMenu'),
-    
+    path('Adminn/', adminView, name='AdminBooksPage'),
 ] 

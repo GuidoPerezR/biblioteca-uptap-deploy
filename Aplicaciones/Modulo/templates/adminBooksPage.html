@@ -7,14 +7,6 @@
 {% include "BarraNavegacionPrincipal.html" %}
 <div class="Biblioteca">
 
-    <div class="aside-book-cart inactive">
-        {% include "bookCart.html" %}
-    </div>
-
-    <div class="aside-user-menu inactive">
-        {% include "userMenu.html" %}
-    </div>
-
     <nav class="secondary-navbar">
 
         <div class="secondary-navbar-content">
@@ -76,50 +68,23 @@
                 <div class="list-books-container">
                     <img class="control prev" src="{%static 'images/left.png'%}">
                     <div class="slider">
-                        <a href="{% url 'modulo:BookDetail' %}">
-                            <div class="book">
 
-                                <div class="book-content">
-
-                                    <div class="book-image">
-                                        <div class="image-content">
-                                            <img src="{%static 'images/libro2.jpg'%}">
-                                        </div>
-                                    </div>
-
-                                    <div class="book-description">
-                                        <div class="book-info">
-                                            <div class="book-title">
-                                                <p>Algebra Lineal</p>
-                                            </div>
-
-                                            <div class="book-author">
-                                                <p>Autor:Gareth williams</p>
-                                            </div>
-
-                                            <div class="book-available">
-                                                <p>Disponibles:4</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </a>
-
-                        <div class="book">
+                        <div class="book admin-book">
                             <div class="book-content">
+
                                 <div class="book-image">
                                     <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
+                                        <img src="{%static 'images/libro2.jpg'%}">
+                                    </div>
+                                    <div class="edit-icon">
+                                        <img src="{%static 'icons/edit.svg'%}">
                                     </div>
                                 </div>
 
                                 <div class="book-description">
                                     <div class="book-info">
                                         <div class="book-title">
-                                            <p>Inteligencia Artificial con aplicaciones a la ingenieria</p>
+                                            <p>Algebra Lineal</p>
                                         </div>
 
                                         <div class="book-author">
@@ -131,21 +96,26 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                        <div class="book">
+
+                        <div class="book admin-book">
                             <div class="book-content">
+
                                 <div class="book-image">
                                     <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
+                                        <img src="{%static 'images/libro2.jpg'%}">
+                                    </div>
+                                    <div class="edit-icon">
+                                        <img src="{%static 'icons/edit.svg'%}">
                                     </div>
                                 </div>
 
                                 <div class="book-description">
                                     <div class="book-info">
                                         <div class="book-title">
-                                            <p>Introduction to java programming</p>
+                                            <p>Algebra Lineal</p>
                                         </div>
 
                                         <div class="book-author">
@@ -157,21 +127,26 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                        <div class="book">
+
+                        <div class="book admin-book">
                             <div class="book-content">
+
                                 <div class="book-image">
                                     <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
+                                        <img src="{%static 'images/libro2.jpg'%}">
+                                    </div>
+                                    <div class="edit-icon">
+                                        <img src="{%static 'icons/edit.svg'%}">
                                     </div>
                                 </div>
 
                                 <div class="book-description">
                                     <div class="book-info">
                                         <div class="book-title">
-                                            <p>Introduction to java programming</p>
+                                            <p>Algebra Lineal</p>
                                         </div>
 
                                         <div class="book-author">
@@ -183,21 +158,45 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                        <div class="book">
-                            <div class="book-content">
+
+                        <div class="book admin-book">
+                            <div class="book-content add-book">
                                 <div class="book-image">
                                     <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
+                                        <img src="{%static 'icons/plus.svg'%}">
                                     </div>
                                 </div>
 
                                 <div class="book-description">
                                     <div class="book-info">
                                         <div class="book-title">
-                                            <p>Introduction to java programming</p>
+                                            <p>Añadir Libro</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="book admin-book">
+                            <div class="book-content">
+
+                                <div class="book-image">
+                                    <div class="image-content">
+                                        <img src="{%static 'images/libro2.jpg'%}">
+                                    </div>
+                                    <div class="edit-icon">
+                                        <img src="{%static 'icons/edit.svg'%}">
+                                    </div>
+                                </div>
+
+                                <div class="book-description">
+                                    <div class="book-info">
+                                        <div class="book-title">
+                                            <p>Algebra Lineal</p>
                                         </div>
 
                                         <div class="book-author">
@@ -209,47 +208,26 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                        <div class="book">
+
+                        <div class="book admin-book">
                             <div class="book-content">
+
                                 <div class="book-image">
                                     <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
+                                        <img src="{%static 'images/libro2.jpg'%}">
+                                    </div>
+                                    <div class="edit-icon">
+                                        <img src="{%static 'icons/edit.svg'%}">
                                     </div>
                                 </div>
 
                                 <div class="book-description">
                                     <div class="book-info">
                                         <div class="book-title">
-                                            <p>Introduction to java programming And more Programs</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams Ignaldum Caucho</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming</p>
+                                            <p>Algebra Lineal</p>
                                         </div>
 
                                         <div class="book-author">
@@ -261,21 +239,26 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                        <div class="book">
+
+                        <div class="book admin-book">
                             <div class="book-content">
+
                                 <div class="book-image">
                                     <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
+                                        <img src="{%static 'images/libro2.jpg'%}">
+                                    </div>
+                                    <div class="edit-icon">
+                                        <img src="{%static 'icons/edit.svg'%}">
                                     </div>
                                 </div>
 
                                 <div class="book-description">
                                     <div class="book-info">
                                         <div class="book-title">
-                                            <p>Introduction to java programming</p>
+                                            <p>Algebra Lineal</p>
                                         </div>
 
                                         <div class="book-author">
@@ -287,21 +270,26 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                        <div class="book">
+
+                        <div class="book admin-book">
                             <div class="book-content">
+
                                 <div class="book-image">
                                     <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
+                                        <img src="{%static 'images/libro2.jpg'%}">
+                                    </div>
+                                    <div class="edit-icon">
+                                        <img src="{%static 'icons/edit.svg'%}">
                                     </div>
                                 </div>
 
                                 <div class="book-description">
                                     <div class="book-info">
                                         <div class="book-title">
-                                            <p>Introduction to java programming</p>
+                                            <p>Algebra Lineal</p>
                                         </div>
 
                                         <div class="book-author">
@@ -313,8 +301,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
 
                     </div>
