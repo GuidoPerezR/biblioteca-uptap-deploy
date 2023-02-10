@@ -5,17 +5,19 @@
 
 {% block content %}
 {% include "BarraNavegacion.html" %}
+
+
+
 <div class=bookDetail">
     <div class="book-detail-content">
 
-        <div class="book-detail-card book-detail-card-admin">
+        <div class="book-detail-card">
             <div class="book-detail-image book-detail-image-admin">
                 <div class="book-detail-image-content">
-                    <img src="{%static 'images/libro2.jpg'%}">
                     <div class="book-detail-image-cover">
                         <div class="book-detail-image-cover-content">
                             <div class="book-detail-button-edit-image">
-                                <button type="reset">Cambiar Imagen</button>
+                                <button type="reset">Subir Imagen</button>
                             </div>
                         </div>
 
@@ -45,20 +47,16 @@
                     </div>
                 </div>
                 <div class="book-detail-buttons">
-                    <div class="button-content boton-guardar">
+                    <div class="button-content boton-añadir-libro">
                         <a href="{% url 'modulo:BookRequest' %}">
-                            <button class="primary-button button-guardar">Guardar Cambios</button>
+                            <button class="primary-button button-añadir-libro">Añadir Libro</button>
                         </a>
-                    </div>
-                    <div class="button-content boton-Eliminar">
-                        <button type="submit" class="primary-button button-Eliminar">Eliminar Libro</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 {% include "footer.html" %}
 {% endblock %}

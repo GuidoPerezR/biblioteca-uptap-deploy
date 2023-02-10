@@ -1,0 +1,164 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Biblioteca Politecnica Libros {% endblock %}
+
+{% block content %}
+{% include "BarraNavegacion.html" %}
+<div class="adminRequestList">
+    <div class="admin-request-list-content">
+
+        <div class="admin-request-list-up">
+            <div class="admin-request-list-title">
+                <div class="admin-request-list-title-content">
+                    <p>Prestamos</p>
+                </div>
+            </div>
+            <div class="admin-request-list-search">
+                <div class="admin-request-list-search-content">
+                    <div class="search-icon">
+                        <img src="{%static 'icons/search.svg'%}">
+                    </div>
+
+                    <div class="search-input">
+                        <form class="d-flex" role="search">
+                            <input type="search" placeholder="Buscar" aria-label="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="admin-request-list-body">
+            <div class="admin-request-list-table">
+                <table>
+                    <thead>
+                        <tr class="admin-request-list-table-titles">
+                            <th class="table-title">
+                                <p>No. de préstamo</p>
+                            </th>
+                            <th class="table-title">
+                                <p>Libros</p>
+                            </th>
+                            <th class="table-title">
+                                <p>Prestatario</p>
+                            </th>
+                            <th class="table-title">
+                                <p>Fecha de devolución</p>
+                            </th>
+                            <th class="table-title">
+                                <p>Estado</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="request">
+                            <td class="request-data id">
+                                <p>#P105</p>
+                            </td>
+                            <td class="request-data libros">
+                                <p>Introduction to Java Programming</p>
+                                <p>Introduction to Java Programming</p>
+                            </td>
+                            <td class="request-data prestatario">
+                                <p>Agapito Dominguez Mejia</p>
+                            </td>
+                            <td class="request-data fecha-devolucion">
+                                <p>08/11/2023</p>
+                            </td>
+                            <td class="request-data estado">
+                                <p>En Prestamo</p>
+                            </td>
+                        </tr>
+                        <tr class="request">
+                            <td class="request-data id">
+                                <p>#P105</p>
+                            </td>
+                            <td class="request-data libros">
+                                <p>Introduction to Java Programming</p>
+                            </td>
+                            <td class="request-data prestatario">
+                                <p>Agapito Dominguez Mejia</p>
+                            </td>
+                            <td class="request-data fecha-devolucion">
+                                <p>08/11/2023</p>
+                            </td>
+                            <td class="request-data estado">
+                                <p>En Prestamo</p>
+                            </td>
+                        </tr>
+                        <tr class="request">
+                            <td class="request-data id">
+                                <p>#P105</p>
+                            </td>
+                            <td class="request-data libros">
+                                <p>Introduction to Java Programming</p>
+                            </td>
+                            <td class="request-data prestatario">
+                                <p>Agapito Dominguez Mejia</p>
+                            </td>
+                            <td class="request-data fecha-devolucion">
+                                <p>08/11/2023</p>
+                            </td>
+                            <td class="request-data estado">
+                                <p>En Prestamo</p>
+                            </td>
+                        </tr>
+                        <tr class="request">
+                            <td class="request-data id">
+                                <p>#P105</p>
+                            </td>
+                            <td class="request-data libros">
+                                <p>Introduction to Java Programming</p>
+                            </td>
+                            <td class="request-data prestatario">
+                                <p>Agapito Dominguez Mejia</p>
+                            </td>
+                            <td class="request-data fecha-devolucion">
+                                <p>08/11/2023</p>
+                            </td>
+                            <td class="request-data estado">
+                                <p>En Prestamo</p>
+                            </td>
+                        </tr>
+                        <tr class="request">
+                            <td class="request-data id">
+                                <p>#P105</p>
+                            </td>
+                            <td class="request-data libros">
+                                <p>Introduction to Java Programming</p>
+                            </td>
+                            <td class="request-data prestatario">
+                                <p>Agapito Dominguez Mejia</p>
+                            </td>
+                            <td class="request-data fecha-devolucion">
+                                <p>08/11/2023</p>
+                            </td>
+                            <td class="request-data estado">
+                                <p>En Prestamo</p>
+                            </td>
+                        </tr>
+                        <tr class="request">
+                            <td class="request-data id">
+                                <p>#P105</p>
+                            </td>
+                            <td class="request-data libros">
+                                <p>Introduction to Java Programming</p>
+                            </td>
+                            <td class="request-data prestatario">
+                                <p>Agapito Dominguez Mejia</p>
+                            </td>
+                            <td class="request-data fecha-devolucion">
+                                <p>08/11/2023</p>
+                            </td>
+                            <td class="request-data estado">
+                                <p>En Prestamo</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
+{% endblock %}

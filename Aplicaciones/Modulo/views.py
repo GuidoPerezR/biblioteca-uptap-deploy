@@ -29,3 +29,6 @@ def booksPage(request):
 
 def adminView(request):
     return render(request, "adminBookDetail.html")
+
+def adminView2(request):
+    return render(request, "adminRequestList.html")
