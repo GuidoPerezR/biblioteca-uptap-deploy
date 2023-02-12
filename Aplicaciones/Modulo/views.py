@@ -5,14 +5,14 @@ from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.decorators import login_required
 
-def ValidarInicioSesionAlumno(request):
+def ValidarInicioSesionUsuario(request):
     if request.method=='POST':
         try:
-            detalleAlumno=Alumno.objects.get(email=request.POST['email'], contraseña=request.POST['contraseña'])
-            request.session['email']=detalleAlumno.email
+            detalleUsuario=Usuario.objects.get(email=request.POST['email'], contraseña=request.POST['contraseña'])
+            request.session['email']=detalleUsuario.email
             return redirect('BooksPage/')
             
-        except Alumno.DoesNotExist as e:
+        except Usuario.DoesNotExist as e:
             messages.success(request, 'Usuario o contraseña incorrectos')
     return render(request, "logIn.html")
 

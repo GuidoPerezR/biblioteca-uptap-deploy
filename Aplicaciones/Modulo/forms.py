@@ -7,6 +7,5 @@ class ProductForm(forms.Form):
     email = forms.CharField(max_length=50, required=True)
     matricula = forms.IntegerField()
     carrera = forms.ModelChoiceField(label="Carrera", queryset=Carrera.objects.all())
-    cuatrimestre = forms.ModelChoiceField(label="Cuatrimestre", queryset=Cuatrimestre.objects.all())
     turno = forms.CharField(max_length=50, required=True)
     contraseña = forms.CharField(max_length=50, required=True)

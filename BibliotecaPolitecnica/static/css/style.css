@@ -285,6 +285,9 @@ p {
 
 /*Contenido Pagina Libros*/
 .secondary-navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: var(--green);
 	padding: 10px 0;
 }
@@ -307,6 +310,7 @@ p {
 	display: flex;
 	gap: 30px;
 	align-items: center;
+	justify-content: center;
 }
 
 .secondary-navbar-sections a {
@@ -692,23 +696,6 @@ p {
 	font-weight: 600;
 }
 
-.user-menu-edit-profile{
-	display: flex;
-	align-items: center;
-	gap: 24px;
-	padding: 24px 42px;
-}
-
-.user-menu-edit-profile-image img{
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-}
-
-.user-menu-edit-profile-text p{
-	font-size: 18px;
-}
-
 .user-menu-log-out{
 	display: flex;
 	align-items: center;
@@ -914,6 +901,7 @@ p {
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 500;
 }
+
 /*Contenido Pagina Principal
 .Modulo{
 	overflow: hidden;

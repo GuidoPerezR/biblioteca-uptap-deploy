@@ -4,19 +4,28 @@ from .models import *
 
 admin.site.register(Libro)
 
-@admin.register(Alumno)
-class AlumnoAdmin(admin.ModelAdmin):
-    ordering = ('matricula',)
-    search_fields = ('id_carrera', 'id_cuatrimestre',)
+@admin.register(Cargo)
+class Cargo(admin.ModelAdmin):
+    ordering = ('id_cargo',)
     #exclude = ('matricula',)
 
-@admin.register(Cuatrimestre)
-class CuatrimestreAdmin(admin.ModelAdmin):
-    ordering = ('nombre_cuatrimestre',)
-    search_fields = ('nombre_cuatrimestre',)
+@admin.register(Usuario)
+class UsuarioAdmin(admin.ModelAdmin):
+    ordering = ('id_usuario',)
+    #exclude = ('matricula',)
+
 
 @admin.register(Carrera)
 class CarreraAdmin(admin.ModelAdmin):
     ordering = ('nom_carrera',)
     search_fields = ('nom_carrera',)
     
+@admin.register(Prestamo)
+class Prestamo(admin.ModelAdmin):
+    ordering = ('id_prestamo',)
+    search_fields = ('id_prestamo',)
+
+@admin.register(Det_Prestamo)
+class Detalle_Prestamo(admin.ModelAdmin):
+    ordering = ('id_det_prestamo',)
+    search_fields = ('id_det_prestamo',)
