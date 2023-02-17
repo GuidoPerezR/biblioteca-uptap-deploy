@@ -4,8 +4,12 @@
 {% block title %} Biblioteca Politecnica Libros {% endblock %}
 
 {% block content %}
-{% include "BarraNavegacionPrincipal.html" %}
+{% include "BarraNavegacionAdmin.html" %}
 <div class="Biblioteca">
+
+    <div class="add-user-page inactive">
+        {% include "adminAddUser.html" %}
+    </div>
 
     <nav class="secondary-navbar">
 

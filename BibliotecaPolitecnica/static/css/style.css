@@ -143,6 +143,7 @@ p {
 	padding: 12px 50px;
 	text-decoration: none;
 	border-color: transparent;
+	cursor: pointer;
 }
 
 .primary-button:hover {
@@ -900,6 +901,47 @@ p {
 .request-data p{
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 500;
+}
+
+/*Contenido Administrador Anadir Usuario*/
+.add-user-content{
+	position: absolute;
+	background: var(--white);
+	box-shadow: 2px 4px 10px rgb(147, 147, 147);
+	width: 400px;
+	height: 650px;
+	z-index: 1;
+	right: 0;
+	margin: 0 24px;
+}
+
+.add-user-form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 12px;
+	width: 100%;
+	height: 100%;
+}
+
+.add-user-form input{
+	width: 250px;
+	height: 40px;
+	border-radius: 10px;
+	border-color: var(--bgBook);
+	font-size: 16px;
+	padding: 0 6px;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 500;
+}
+
+.add-user-title p{
+	font-size: 28px;
+}
+
+.button-agregar{
+	margin-top: 24px;
 }
 
 /*Contenido Pagina Principal

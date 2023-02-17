@@ -40,8 +40,6 @@ function toggleBookCart(){
     bookCart.classList.toggle('inactive')
 }
 
-console.log(" sssonda ")
-
 /*
 const booksContainer = document.querySelector('.books-container')
 

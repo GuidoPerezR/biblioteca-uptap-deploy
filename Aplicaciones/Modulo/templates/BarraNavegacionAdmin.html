@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <nav class="navbar">
+
+        <div class="navbar-left">
+
+            <div class="navbar-logo">
+                <a href="{% url 'modulo:BooksPage' %}">
+                    <img src="{%static 'images/LogoUPTap.png'%}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="navbar-titulo">
+                <p>Biblioteca Politécnica</p>
+            </div>
+
+        </div>
+
+        <div class="navbar-icons">
+            <div class="add-user-icon">
+                <img src="{%static 'icons/add-person.svg'%}">
+            </div>
+        </div>
+
+    </nav>
+</body>
+
+</html>
