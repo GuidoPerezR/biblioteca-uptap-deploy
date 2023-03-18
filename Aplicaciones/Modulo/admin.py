@@ -7,13 +7,14 @@ admin.site.register(Libro)
 @admin.register(Cargo)
 class Cargo(admin.ModelAdmin):
     ordering = ('id_cargo',)
-    #exclude = ('matricula',)
+
+@admin.register(Turno)
+class Turno(admin.ModelAdmin):
+    ordering = ('id_turno',)
 
 @admin.register(Usuario)
 class UsuarioAdmin(admin.ModelAdmin):
     ordering = ('id_usuario',)
-    #exclude = ('matricula',)
-
 
 @admin.register(Carrera)
 class CarreraAdmin(admin.ModelAdmin):

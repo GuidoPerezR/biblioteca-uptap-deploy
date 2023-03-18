@@ -12,42 +12,45 @@
         <div class="book-detail-card">
             <div class="book-detail-image">
                 <div class="book-detail-image-content">
-                    <img src="{%static 'images/libro2.jpg'%}">
+                    <img src="{{book.imagen.url}}">
                 </div>
             </div>
             <div class="book-detail-description">
                 <div class="book-detail-info">
                     <div class="book-detail-title">
-                        <p>Introduction to Java Programming</p>
+                        <p>{{ book.titulo }}</p>
                     </div>
                     <div class="book-detail-available">
-                        <p>Disponibles: 5</p>
+                        <p>Disponibles: {{ book.disponibles }}</p>
                     </div>
-                    <p class="text-informacion-del-libro">Informacion del libro</p>
+                    <p class="text-informacion-del-libro">Información del libro</p>
                     <div class="book-detail-author">
-                        <p>Autor: K. Somasundaram</p>
+                        <p>Autor: {{ book.autor }}</p>
                     </div>
                     <div class="book-detail-editorial">
-                        <p>Editorial: Jaico Publishing House</p>
+                        <p>Editorial: {{ book.editorial }}</p>
                     </div>
                     <div class="book-detail-languague">
-                        <p>Idioma: Ingles</p>
+                        <p>Idioma: {{ book.idioma }}</p>
                     </div>
                     <div class="book-detail-pages">
-                        <p>Paginas: 646</p>
+                        <p>Paginas: {{ book.paginas }}</p>
                     </div>
                 </div>
                 <div class="book-detail-buttons">
                     <div class="button-content boton-solicitar">
-                        <a href="{% url 'modulo:BookRequest' %}">
+                        <a href="{% url 'modulo:BookRequest' book.codigo_interno %}">
                             <button class="primary-button button-solicitar">Solicitar</button>
                         </a>
                     </div>
                     <div class="button-content boton-Añadir">
-                        <button type="submit" class="primary-button button-Añadir">Añadir al librero</button>
+                        <a href="#">
+                            <button type="submit" class="primary-button button-Añadir">Añadir al librero</button>
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

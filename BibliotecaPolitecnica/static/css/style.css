@@ -119,9 +119,9 @@ p {
 	height: auto;
 }
 
-.search-icon {
-	display: flex;
-	justify-content: start;
+.search-input  button{
+	background: transparent;
+	border-color: transparent;
 }
 
 .navbar-icons {
@@ -210,7 +210,7 @@ p {
 
 .content-alert {
 	position: absolute;
-	margin-top: 12px;
+	top: 22%;
 	width: 20%;
 	z-index: 1;
 }
@@ -384,7 +384,7 @@ p {
 	text-decoration: none;
 }
 
-.control {
+.control{
 	position: absolute;
 	width: 80px;
 	height: 80px;
@@ -406,7 +406,7 @@ p {
 	transform: translate(-125%, -50%);
 }
 
-.next {
+.next{
 	padding: 12px;
 	right: 0;
 	top: 50%;
@@ -734,13 +734,27 @@ p {
 	z-index: 1;
 }
 
-.add-book{
-	cursor: pointer;
+.add-book-icon img{
+	padding: 6px;
 }
 
 /*Contenido del detalle del libro del Administrador*/
-.book-detail-card-admin{
-	height: 400px;
+.book-detail-form{
+	display: flex;
+	width: 1100px;
+	background: var(--bgBook);
+}
+
+.book-detail-image-content-admin{
+	width: 400px;
+	height: 550px;
+	background: var(--white);
+}
+
+.book-detail-image-content-admin img {
+	padding: 24px;
+	width: 100%;
+	height: 100%;
 }
 
 .book-detail-image-admin{
@@ -765,7 +779,7 @@ p {
 	background: rgba(112, 112, 112, 0.664);
 }
 
-.book-detail-button-edit-image button{
+.book-detail-image-cover-content button{
 	background: rgb(54, 52, 52);
 	border-radius: 10px;
 	color: var(--white);
@@ -773,9 +787,13 @@ p {
 	border: transparent;
 }
 
-.book-detail-button-edit-image button:hover{
+.book-detail-image-cover-content button:hover{
 	background: var(--white);
 	color: rgb(54, 52, 52);;
+}
+
+.book-detail-button-edit-image{
+	display: none;
 }
 
 .book-detail-description-admin{
@@ -903,7 +921,17 @@ p {
 	font-weight: 500;
 }
 
-/*Contenido Administrador Anadir Usuario*/
+/*Contenido Administrador funciones Añadir*/
+.add-career-content{
+	position: absolute;
+	background: var(--white);
+	box-shadow: 2px 4px 10px rgb(147, 147, 147);
+	width: 400px;
+	height: 350px;
+	z-index: 1;
+	right: 0;
+	margin: 0 24px;
+}
 .add-user-content{
 	position: absolute;
 	background: var(--white);
@@ -925,7 +953,7 @@ p {
 	height: 100%;
 }
 
-.add-user-form input{
+.form-field input{
 	width: 250px;
 	height: 40px;
 	border-radius: 10px;
@@ -940,174 +968,24 @@ p {
 	font-size: 28px;
 }
 
+.user-form{
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.choice-field select{
+	width: 100%;
+	padding: 6px;
+	font-size: 18px;
+}
+
+.add-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .button-agregar{
 	margin-top: 24px;
 }
-
-/*Contenido Pagina Principal
-.Modulo{
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	padding: 24px;
-}
-
-.title{
-   font-size:var(--md);
-   text-align: center;
-   margin-top: 24px;
-}
-
-.Botones{
-	display: flex;
-    flex-direction: column;
-    padding: 0 100px;
-    margin-top: 24px;
-}
-
-.Botones-up{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	padding: 25px;
-	margin-bottom: 32px;
-	gap: 24px;
-}
-
-.Botones-down{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.boton-content{
-	width: 60%;
-}
-
-.content-button{
-	width: 100%;
-	padding: 15px;
-}
-
-.content-button a{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 24px;
-}
-
-.content-button img{
-	width: 40px;
-}
-
-/*Contenido Inicio de Sesion
-
-.iniciarSesion{
-	align-items: center;
-}
-
-.content-alert{
-	width: 30%;
-	margin-top: 24px;
-}
-
-.content-alert ul {
-    list-style: none;
-    padding: 0 12px;
-}
-
-.iniciarSesion-title{
-	margin-top: 42px;
-}
-
-.content-inicioSesion{
-    padding-top: 40px;
-}
-
-.input-password{
-    padding-top: 40px;
-}
-
-.boton-ingresar{
-    padding-top: 40px;
-}
-
-.button-ingresar{
-	width: 100%;
-}
-
-.form-signin {
-	max-width: 400px;
-}
-
-.form-signin input[type="email"] {
-    font-size: 20px;
-}
-
-.form-signin input[type="password"] {
-  font-size: 20px;
-}
-
-/*Contenido Pagina Libros
-
-h1{
-	padding-left: 60px;
-    padding-top: 30px;
-    width: 80%;
-}
-
-.books-container{
-	display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-	padding-bottom: 100px;
-}
-
-.books-container button{
-	background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-    height: 100%;
-	width: 100%;
-}
-
-.book-card{
-	width: 20%;
-    margin: 2rem; 
-}
-
-.book-card:hover{
-	transform: translateY(-3%);
-}
-
-.book-content{
-	background-color: var(--bgBook);
-    border-radius: 30px;
-	padding-bottom: 24px;
-}
-
-.book-content img{
-	width: 150px;
-	height: 250px;
-	padding-top: 30px;
-    padding-bottom: 16px;
-}
-
-.book-info{
-	padding-left: 30px;
-    text-align: left;
-}
-
-.book-info p{
-	margin-bottom: 5px;
-	font-size: var(--sizeInfoBook);
-}
-
-.book-title{
-	font-size: var(--sizeBookTitle);
-	padding-bottom: 10px;
-	margin-bottom: 0;
-}
-
-@media screen and (max-width: 800px){
-	
-}*/

@@ -23,13 +23,13 @@
 
             <div class="navbar-search-content">
 
-                <div class="search-icon">
-                    <img src="{%static 'icons/search.svg'%}">
-                </div>
-
                 <div class="search-input">
-                    <form class="d-flex" role="search">
-                        <input type="search" placeholder="Buscar Libros" aria-label="Search">
+                    <form class="d-flex" method="get" action="{% url 'modulo:BooksPage' %}">
+                        <button type="submit">
+                            <img src="{%static 'icons/search.svg'%}">
+                        </button>
+                        <input type="search" placeholder="Buscar Libro" aria-label="Search" name="buscar"
+                            value="{{ request.GET.buscar }}">
                     </form>
                 </div>
 
@@ -42,7 +42,7 @@
                 <img src="{%static 'icons/library.svg'%}">
             </div>
             <div class="user-icon">
-                <img src="{%static 'icons/user.svg'%}">
+                <img src="{%static 'icons/user1.svg'%}">
             </div>
         </div>
 

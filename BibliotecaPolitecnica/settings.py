@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,6 +31,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '8921-189-148-74-85.ngrok.io',
 ]
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
 
 # Application definition
@@ -82,7 +85,7 @@ WSGI_APPLICATION = 'BibliotecaPolitecnica.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'BibliotecaPoli',
+        'NAME': 'BibliotecaDigital',
         'USER': 'postgres',
         'PASSWORD': 'mordecai27',
         'HOST': 'localhost',
@@ -120,6 +123,9 @@ TIME_ZONE = 'GMT'
 USE_I18N = True
 
 USE_TZ = True
+
+LOGIN_REDIRECT_URL = reverse_lazy('modulo:BooksPage')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
 
 
 # Static files (CSS, JavaScript, Images)

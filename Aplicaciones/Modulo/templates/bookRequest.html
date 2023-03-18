@@ -12,9 +12,9 @@
             <div class="book-request-description">
                 <div class="book-request-info">
                     <p class="text-thanks-request">¡Gracias por tu solicitud!</p>
-                    <p>Su número de préstamo es #PL105</p>
+                    <p>Su número de préstamo es #PL{{ book_request.id_prestamo}}</p>
                     <div class="book-request-return-date">
-                        <p>La fecha de devolucion es el 11/01/2023</p>
+                        <p>La fecha de devolucion es el {{ book_request.fecha_devolucion}}</p>
                     </div>
                     <p>En caso de que no regrese el libro a tiempo o lo devuelva dañado, se le
                         aplicara una sancion</p>

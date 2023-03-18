@@ -5,6 +5,7 @@
 
 {% block content %}
 {% include "BarraNavegacionPrincipal.html" %}
+{% if request.user.is_authenticated %}
 <div class="Biblioteca">
 
     <div class="aside-book-cart inactive">
@@ -20,34 +21,34 @@
         <div class="secondary-navbar-content">
 
             <div class="secondary-navbar-sections">
-                <a href="#Agroindustrial">
+                <a href="#Ingeniería Agroindustrial">
                     <p>Agroindustrial</p>
                 </a>
-                <a href="#Ambiental">
+                <a href="#Ingeniería en Tecnología Ambiental">
                     <p>Ambiental</p>
                 </a>
-                <a href="#Animación">
+                <a href="#Ingeniería en Animación y Efectos Visuales">
                     <p>Animación</p>
                 </a>
-                <a href="#Automotrices">
+                <a href="#Ingeniería en Sistemas Automotrices">
                     <p>Automotrices</p>
                 </a>
-                <a href="#Energía">
+                <a href="#Ingeniería en Energía">
                     <p>Energía</p>
                 </a>
-                <a href="#Financiera">
+                <a href="#Ingeniería Financiera">
                     <p>Financiera</p>
                 </a>
-                <a href="#Logística">
+                <a href="#Ingeniería en Logística y Transporte">
                     <p>Logística</p>
                 </a>
-                <a href="#Mecatrónica">
+                <a href="#Ingeniería Mecatrónica">
                     <p>Mecatrónica</p>
                 </a>
-                <a href="#Nanotecnología">
+                <a href="#Ingeniería en Nanotecnología">
                     <p>Nanotecnología</p>
                 </a>
-                <a href="#Software">
+                <a href="#Ingeniería en Software">
                     <p>Software</p>
                 </a>
             </div>
@@ -58,336 +59,99 @@
 
     <div class="books-page">
 
-        <div class="list-books agroindustrial" id="Agroindustrial">
+        {% for carrera in carreras %}
+        <div class="list-books" id="{{ carrera.nom_carrera }}">
 
             <div class="section-name">
-                <h1>Ingeniería Agroindustrial</h1>
+                <h1>{{ carrera.nom_carrera }}</h1>
             </div>
 
             <div class="list-books-section">
                 <div class="list-books-container">
                     <img class="control prev" src="{%static 'images/left.png'%}">
                     <div class="slider">
-                        <a href="{% url 'modulo:BookDetail' %}">
+                        {% for libro in libros %}
+                        {% if libro.carrera == carrera %}
+                        <a href="{% url 'modulo:BookDetail' libro.codigo_interno %}">
                             <div class="book">
-
                                 <div class="book-content">
-
                                     <div class="book-image">
                                         <div class="image-content">
-                                            <img src="{{image.url}}">
+                                            <img src="{{libro.imagen.url}}">
                                         </div>
                                     </div>
-
                                     <div class="book-description">
                                         <div class="book-info">
                                             <div class="book-title">
-                                                <p>Algebra Lineal</p>
+                                                <p>{{ libro.titulo }}</p>
                                             </div>
-
                                             <div class="book-author">
-                                                <p>Autor:Gareth williams</p>
+                                                <p>{{ libro.autor }}</p>
                                             </div>
-
                                             <div class="book-available">
-                                                <p>Disponibles:4</p>
+                                                <p>Disponibles: {{ libro.disponibles }}</p>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
                         </a>
-
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Inteligencia Artificial con aplicaciones a la ingenieria</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming And more Programs</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams Ignaldum Caucho</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="book">
-                            <div class="book-content">
-                                <div class="book-image">
-                                    <div class="image-content">
-                                        <img src="{%static 'images/libro1.jpg'%}">
-                                    </div>
-                                </div>
-
-                                <div class="book-description">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>Introduction to java programming</p>
-                                        </div>
-
-                                        <div class="book-author">
-                                            <p>Autor:Gareth williams</p>
-                                        </div>
-
-                                        <div class="book-available">
-                                            <p>Disponibles:4</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+                        {% endif %}
+                        {% endfor %}
                     </div>
                     <img class="control next" src="{%static 'images/right.png'%}">
                 </div>
             </div>
 
         </div>
+        {% endfor%}
 
-        <div class="list-books ambiental" id="Ambiental">
-
-            <div class="section-name">
-                <h1>Ingeniería en Tecnología Ambiental</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books animacion" id="Animación">
-
-            <div class="section-name">
-                <h1>Ingeniería en Animación y Efectos Visuales</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books automotrices" id="Automotrices">
-
-            <div class="section-name">
-                <h1>Ingeniería en Sistemas Automotrices</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books energia" id="Energía">
-
-            <div class="section-name">
-                <h1>Ingeniería en Energía</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books financiera" id="Financiera">
-
-            <div class="section-name">
-                <h1>Ingeniería Financiera</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books logistica" id="Logística">
-
-            <div class="section-name">
-                <h1>Ingeniería en Logística y Transporte</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books mecatronica" id="Mecatrónica">
-
-            <div class="section-name">
-                <h1>Ingeniería Mecatronica</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books nanotecnologia" id="Nanotecnología">
-
-            <div class="section-name">
-                <h1>Ingeniería en Nanotecnología</h1>
-            </div>
-
-        </div>
-
-        <div class="list-books software" id="Software">
-
-            <div class="section-name">
-                <h1>Ingeniería en Software</h1>
-            </div>
-
-        </div>
     </div>
 </div>
+{% endif %}
+<script>
+    /*Programacion Slider*/ 
+    const slider = document.getElementsByClassName('slider')
+    const prev = document.getElementsByClassName('prev')
+    const next = document.getElementsByClassName('next')
+
+    for (let index = 0; index < slider.length; index++) {
+        prev[index].addEventListener('click', () => (
+            slider[index].scrollLeft -= 600))
+        next[index].addEventListener('click', () => (
+            slider[index].scrollLeft += 600))
+        console.log(prev)
+        console.log(next)
+    }
+
+    /*Programacion menu de vistas de la pagina de libros*/
+    const buttonBookCart = document.querySelector('.book-cart-icon')
+    const buttonUserMenu = document.querySelector('.user-icon')
+    const bookCart = document.querySelector('.aside-book-cart')
+    const userMenu = document.querySelector('.aside-user-menu')
+
+    buttonUserMenu.addEventListener('click', toggleUserMenu)
+    buttonBookCart.addEventListener('click', toggleBookCart)
+
+    function toggleUserMenu() {
+        const isBookCartClosed = bookCart.classList.contains('inactive')
+
+        if (!isBookCartClosed) {
+            bookCart.classList.add('inactive')
+        }
+
+        userMenu.classList.toggle('inactive')
+    }
+
+    function toggleBookCart() {
+        const isUserMenuClosed = userMenu.classList.contains('inactive')
+
+        if (!isUserMenuClosed) {
+            userMenu.classList.add('inactive')
+        }
+
+        bookCart.classList.toggle('inactive')
+    }
+</script>
 {% include "footer.html" %}
 {% endblock %}

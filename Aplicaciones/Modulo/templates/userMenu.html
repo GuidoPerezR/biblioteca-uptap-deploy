@@ -3,7 +3,6 @@
 {% block content %}
 <aside class="userMenu">
     <div class="user-menu-content">
-
         <div class="user-menu-data">
             <div class="user-menu-data-image">
                 <div class="user-menu-data-image-content">
@@ -13,12 +12,16 @@
             <div class="user-menu-data-info">
                 <div class="user-menu-data-name">
                     <div class="user-menu-data-name-content">
-                        <p>Alan Josue Valeriano Delgado</p>
+                        {% if user.is_staff %}
+                        <p>{{ user.first_name }}</p>
+                        {% else %}
+                        <p>{{ usuario.nombre_completo }}</p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="user-menu-data-email">
                     <div class="user-menu-data-email-content">
-                        <p>213171@uptapachula.edu.mx</p>
+                        <p>{{ user.username }}</p>
                     </div>
                 </div>
             </div>
@@ -27,7 +30,9 @@
         <div class="user-menu-log-out">
             <div class="user-menu-log-out-image">
                 <div class="user-menu-log-out-image-contetn">
-                    <img src="{%static 'icons/exit.svg'%}">
+                    <a href="{% url 'logout' %}">
+                        <img src="{%static 'icons/exit.svg'%}">
+                    </a>
                 </div>
             </div>
             <div class="user-menu-log-out-text">
