@@ -22,9 +22,10 @@ from Aplicaciones.Modulo.views import LogInUser
 
 
 urlpatterns = [
-    path('', include('Aplicaciones.Modulo.urls')),
+    # path('', include('Aplicaciones.Modulo.urls')),
     path('admin/', admin.site.urls),
-    path('accounts/login/', LogInUser, name = 'login'),
+    # path('accounts/login/', LogInUser, name = 'login'),
+    path('', LogInUser, name = 'login'),
     path('Logout/', logout_then_login, name='logout')
 ]
 
