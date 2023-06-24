@@ -36,10 +36,10 @@ def booksPage(request):
     busqueda = request.GET.get("buscar")
 
     """Verificar si el usuario es administrador o alumno"""
-    """ if user.is_staff:
+    if user.is_staff:
         usuario = user
     else:
-        usuario = get_object_or_404(Usuario, email = request.user.username) """
+        usuario = get_object_or_404(Usuario, email = request.user.username)
 
     """Realizar busqueda de libro"""
     if busqueda:
