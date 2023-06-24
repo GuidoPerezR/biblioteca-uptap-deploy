@@ -1,0 +1,1 @@
+web: gunicorn BibliotecaPolitecnica.wsgi --log-file - 
